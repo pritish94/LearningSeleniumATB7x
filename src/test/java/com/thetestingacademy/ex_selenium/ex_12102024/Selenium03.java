@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex_selenium;
+package com.thetestingacademy.ex_selenium.ex_12102024;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
