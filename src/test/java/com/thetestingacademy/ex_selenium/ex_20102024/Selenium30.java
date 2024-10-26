@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Selenium30 {
 
@@ -21,8 +22,12 @@ public class Selenium30 {
         edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         edgeOptions.addArguments("--start-maximized");
 
+
+
         EdgeDriver driver = new EdgeDriver(edgeOptions);
         driver.get("https://www.ebay.com/b/Desktops-All-In-One-Computers/171957/bn_1643067");
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         try {
             Thread.sleep(3000);
