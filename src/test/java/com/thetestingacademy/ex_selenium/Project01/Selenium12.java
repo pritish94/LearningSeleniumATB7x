@@ -21,6 +21,7 @@ public class Selenium12 {
 
         Assert.assertEquals(driver.getTitle(),"Login - VWO");
         Assert.assertEquals(driver.getCurrentUrl(),"https://app.vwo.com/#/login");
+        Assert.assertTrue(driver.getPageSource().contains("Sign in using SSO"));
         driver.quit();
 
 
