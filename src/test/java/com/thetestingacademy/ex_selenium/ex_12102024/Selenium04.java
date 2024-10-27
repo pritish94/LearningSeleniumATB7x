@@ -1,5 +1,6 @@
 package com.thetestingacademy.ex_selenium.ex_12102024;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
@@ -60,15 +61,20 @@ public class Selenium04 {
 
         // 3. do you want to run on multiple browsers, aws machine, ? 2%
         // RemoteWebDriver driver (with GRID) - Advance (Last 2 Sessions)
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-optimized");
+        options.addArguments("--disable-notifications");
+
         String url = "https://localhost.4004";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
+        capabilities.setCapability(ChromeOptions.CAPABILITY,options);
 
         WebDriver driver = null;
         try {
             driver = new RemoteWebDriver(new URL(url),capabilities);
             driver.get("https://www.google.com");
-            System.out.println("title this pgae is " + driver.getTitle());
+            System.out.println("title this page is " + driver.getTitle());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }finally {
