@@ -59,7 +59,7 @@ public class Selenium30 {
         // .s-item__title > 63 , .s-item__price ->
         // max -> loop where
         int size = Math.min(searchTitles.size(),searchTitlesPrices.size()); //61
-        for(int i = 0; i<= size ; i++ ){
+        for(int i = 0; i< size ; i++ ){
             System.out.println("Title: " + searchTitles.get(i).getText() + " || " + "Price: " + searchTitlesPrices.get(i).getText());
             System.out.println();
             // Max price or Min Price - Print it
