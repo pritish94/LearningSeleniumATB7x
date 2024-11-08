@@ -1,4 +1,6 @@
 package com.thetestingacademy.ex_selenium.ex_12102024;
+import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -64,6 +66,13 @@ public class Selenium04 {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-optimized");
         options.addArguments("--disable-notifications");
+        options.addArguments("--headless");
+        options.addArguments("window-size=1920x1080");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--incognito");
+        options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        options.setCapability("acceptSslCerts", true);
+        options.setCapability("proxy", new Proxy().setHttpProxy("myproxyserver:8080"));
 
         String url = "https://localhost.4004";
         DesiredCapabilities capabilities = new DesiredCapabilities();
