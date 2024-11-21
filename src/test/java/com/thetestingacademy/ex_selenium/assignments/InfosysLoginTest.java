@@ -38,7 +38,7 @@ public class InfosysLoginTest {
     }
 
 
-    @Test
+    @Test (priority = 1)
     public void PosLoginTest(){
         //Login with valid credential
         performLogin("student","Password123");
@@ -50,7 +50,7 @@ public class InfosysLoginTest {
     }
 
 
-    @Test
+    @Test (priority = 2)
     public void NegUserNameTest() throws InterruptedException {
         //Login with invalid userName
         performLogin("incorrect userName","Password123");
@@ -63,7 +63,7 @@ public class InfosysLoginTest {
     }
 
 
-    @Test
+    @Test (priority = 3)
     public void NegPasswordTest() throws InterruptedException {
         //Login with invalid password
         performLogin("student","incorrect password");
