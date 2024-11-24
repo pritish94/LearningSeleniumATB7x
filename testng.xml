@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/pritishm/OneDrive - Nice Systems Ltd/Desktop/LearningSeleniumATB7x/src/test/java/com/thetestingacademy/ex_selenium/assignments/InfosysLoginTest.java">
+        <classes>
+            <class name="com.thetestingacademy.ex_selenium.assignments.InfosysLoginTest">
+                <methods>
+                    <include name="PosLoginTest"/>
+                    <include name="NegUserNameTest"/>
+                    <include name="NegPasswordTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

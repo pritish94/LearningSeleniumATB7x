@@ -40,3 +40,6 @@ build/
 ###Alure reports####
 allure-results/
 
+###TestNG report####
+test-output/
+
